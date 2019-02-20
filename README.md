@@ -1,7 +1,7 @@
-Wizard PDF generator
+`losen-pdf`
 ===
 
-PDF generator based on headless Chrome and puppeteer for making good looking PDFs for wizards. Compatible with [losen](https://npmjs.com/losen).
+PDF generator based on headless Chrome and puppeteer for making good looking PDFs for wizards made with [losen](https://npmjs.com/losen).
 
 ## How it works
 Expects a `POST` request to `/pdf` with a JSON body with the following properties in the body:
