@@ -13,7 +13,7 @@ Expects a `POST` request to `/pdf` with a JSON body with the following propertie
 ## Example
 
 ### Payload
-```js
+```
 {
   "url": "https://dibk-prodok.firebaseapp.com",
   "localStorageKey": "reduxPersist:@WIZARD_STATE",
@@ -66,7 +66,7 @@ Content-Length: 105
 The response is a binary blob with content type `application/pdf`.
 
 ## Deployment
-The PDF generator can be hosted as a serverless function in order for you to pay only for the time it's actually generating PDFs. We recommend [now](https://https://zeit.co/now) as it's one of the easiest platforms to get started with.
+The PDF generator is built for hosting as a serverless function on [now](https://https://zeit.co/now). It's super easy to get up and running, free for reasonable amounts of traffic and built on top of AWS lambda.
 
 ### Before deploying
 👮‍ You want to fork this repo and edit the `now.json` file to give the app a name and set the environment variable `ALLOWED_DOMAINS` to a comma separated list of domains that you want to allow generating PDFs from.
@@ -75,7 +75,7 @@ If you want to, you can use `.*` as a wildcard in the urls, like this: `.*.ngrok
 
 ### The process
 1. Install now by running `npm i -g now` (only first time)
-2. Issue the command `now` when standing in the project folder. Now will ask you to sign in if it's the first time
+2. Issue the command `now` when standing in the project folder. Now will start building the service, give you an url and deploy it. If you haven't deployed with now before, or if it's a long time since last time you'll be prompted to sign in.
 3. You should get a response similar to this when you deploy:
 
 ```sh
@@ -88,6 +88,14 @@ If you want to, you can use `.*` as a wildcard in the urls, like this: `.*.ngrok
 └── λ pdf.js (35.15MB) [bru1]
 > Success! Deployment ready [47s]
 ```
+
+#### Custom domain
+Now supports pointing a custom domain to the deployed application through the use of the `now alias` function. If you want to point `my.custom.domain.com` to the instance, you issue this command
+
+```now alias https://dibk-pdf-lt0crv82h.now.sh my.custom.domain.com```
+
+`now` will check if the domain you want to use has been pointed to them already (which it need to be in order for the traffic to get there) and will guide you through the process if not.
+
 ## Integrating with losen
 In order to have a wizard use the pdf service you need to add the print service url to the meta portion of your schema, like this:
 
