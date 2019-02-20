@@ -1,11 +1,36 @@
 {
-  "name": "puppeteer-screenshot",
+  "name": "losen-pdf",
   "version": "1.0.0",
-  "description": "Take screenshot of a website",
+  "description": "PDF generator companion service for losen wizards",
   "private": true,
   "license": "MIT",
   "dependencies": {
     "chrome-aws-lambda": "1.11.1",
     "puppeteer-core": "1.11.0"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Kristoffer Brabrand",
+      "email": "kristoffer@brabrand.no"
+    },
+    {
+      "name": "Tommy Nordum",
+      "email": "tommy.nordum@netlife.com"
+    }
+  ],
+  "keywords": [
+    "puppeteer",
+    "chrome",
+    "losen",
+    "pdf",
+    "dibk"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DirektoratetForByggkvalitet/losen-pdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DirektoratetForByggkvalitet/losen-pdf/issues"
+  },
+  "homepage": "https://github.com/DirektoratetForByggkvalitet/losen-pdf"
 }
