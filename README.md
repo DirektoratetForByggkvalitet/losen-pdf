@@ -95,7 +95,8 @@ In order to have a wizard use the pdf service you need to add the print service 
 {
   "meta": {
     ...
-    "pdfGeneratorUrl": "https://dibk-pdf-lt0crv82h.now.sh"
+    "pdfGeneratorUrl": "https://dibk-pdf-lt0crv82h.now.sh",
+    "localStorageKey": "reduxPersist:@WIZARD_STATE"
   },
   "schema": [
     ...
