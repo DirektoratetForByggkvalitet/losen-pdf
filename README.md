@@ -1,4 +1,4 @@
-`losen-pdf`
+🖨 `losen-pdf`
 ===
 
 PDF generator based on headless Chrome and puppeteer for making good looking PDFs for wizards made with [losen](https://npmjs.com/losen).
@@ -65,11 +65,11 @@ Content-Length: 105
 ### Response
 The response is a binary blob with content type `application/pdf`.
 
-## Deployment
+## 🚀 Deployment
 The PDF generator is built for hosting as a serverless function on [now](https://https://zeit.co/now). It's super easy to get up and running, free for reasonable amounts of traffic and built on top of AWS lambda.
 
-### Before deploying
-👮‍ You want to fork this repo and edit the `now.json` file to give the app a name and set the environment variable `ALLOWED_DOMAINS` to a comma separated list of domains that you want to allow generating PDFs from.
+### 🚦 Before deploying
+You want to fork this repo and edit the `now.json` file to give the app a name and set the environment variable `ALLOWED_DOMAINS` to a comma separated list of domains that you want to allow generating PDFs from.
 
 If you want to, you can use `.*` as a wildcard in the urls, like this: `.*.ngrok.io`.
 
